@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanctuary ❤️ — Happy Birthday</title>
+
+  <!-- Google Fonts: Great Vibes for the emotional script accent, Poppins for clean body/UI text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="landing-page">
+
+  <!-- Ambient gradient glow layers, purely decorative -->
+  <div class="glow-orb glow-orb--one"></div>
+  <div class="glow-orb glow-orb--two"></div>
+
+  <!-- Floating hearts are injected here at runtime by script.js -->
+  <div class="hearts-field" id="heartsField" aria-hidden="true"></div>
+
+  <!-- Main landing content -->
+  <main class="landing-content">
+    <p class="eyebrow">A little something, just for you</p>
+
+    <h1 class="title">
+      Happy Birthday
+    </h1>
+
+    <h2 class="title-script">for Sanctuary <span class="heart-mark">❤</span></h2>
+
+    <p class="subtitle">
+      Every beautiful soul deserves<br />
+      a beautiful day.
+    </p>
+
+    <button class="open-wish-btn" id="openWishBtn" type="button">
+      <span class="btn-icon">♡</span>
+      <span class="btn-label">Open My Wish</span>
+    </button>
+  </main>
+
+  <!-- Transition overlay: fades to black, shows "Loading Memories..." before navigating to letter.html -->
+  <div class="transition-overlay" id="transitionOverlay">
+    <p class="loading-text">
+      Loading Memories<span class="dots"><span>.</span><span>.</span><span>.</span></span>
+    </p>
+  </div>
+
+  <!-- Background music, only starts playing after the user clicks "Open My Wish" -->
+  <audio id="bgMusic" src="music/sanctuary.mp3" loop preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

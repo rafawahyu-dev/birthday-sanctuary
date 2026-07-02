@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Letter for Sanctuary ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="letter-page">
+
+  <!-- Ambient gradient glow layers -->
+  <div class="glow-orb glow-orb--one"></div>
+  <div class="glow-orb glow-orb--two"></div>
+
+  <!-- Floating hearts background, continues forever on this page too -->
+  <div class="hearts-field" id="heartsField" aria-hidden="true"></div>
+
+  <main class="letter-content">
+
+    <!-- Envelope: opens automatically on page load, then the letter paper slides up out of it -->
+    <div class="envelope-wrap" id="envelopeWrap">
+      <div class="envelope">
+        <div class="envelope__back"></div>
+        <div class="envelope__paper" id="envelopePaper"></div>
+        <div class="envelope__flap"></div>
+        <div class="envelope__front-left"></div>
+        <div class="envelope__front-right"></div>
+        <div class="envelope__seal">❤</div>
+      </div>
+    </div>
+
+    <!-- The actual letter card, hidden until the envelope animation finishes -->
+    <section class="letter-card" id="letterCard">
+      <p class="letter-text" id="letterText"></p>
+      <span class="typing-cursor" id="typingCursor">|</span>
+
+      <!-- Polaroid photo, revealed after the typing animation completes -->
+      <div class="polaroid" id="polaroid">
+        <img src="images/photo.jpg" alt="A memory of us" />
+        <p class="polaroid-caption">some memories become a sanctuary</p>
+      </div>
+
+      <button class="go-back-btn" id="goBackBtn" type="button">
+        <span class="btn-icon">←</span>
+        <span class="btn-label">Go Back</span>
+      </button>
+    </section>
+  </main>
+
+  <!-- Canvas used for the heart confetti burst -->
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <!-- Music keeps playing across pages -->
+  <audio id="bgMusic" src="music/sanctuary.mp3" loop preload="auto" autoplay></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
